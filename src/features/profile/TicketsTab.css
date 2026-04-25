@@ -1,0 +1,137 @@
+.tickets-tab .section-head {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tickets-tab .section-head i {
+  color: #ff8c00;
+}
+
+.count-badge {
+  background: #ff8c00;
+  color: #111;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+
+.btn-create-ticket {
+  background: #ff8c00;
+  color: #111;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-create-ticket:hover {
+  background: #e67300;
+}
+
+.ticket-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #444;
+  background: transparent;
+  color: #aaa;
+  transition: all 0.2s;
+  text-transform: capitalize;
+}
+
+.filter-btn:hover {
+  border-color: #ff8c00;
+  color: #ff8c00;
+}
+
+.filter-btn.active {
+  background: #ff8c00;
+  color: #111;
+  border-color: #ff8c00;
+}
+
+.tickets-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-state i {
+  font-size: 64px;
+  color: #444;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.empty-state p {
+  color: #888;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn-shop {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #ff8c00;
+  color: #111;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-shop:hover {
+  background: #e67300;
+}
+
+@media (max-width: 768px) {
+  .tickets-tab .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .btn-create-ticket {
+    width: 100%;
+    justify-content: center;
+  }
+}

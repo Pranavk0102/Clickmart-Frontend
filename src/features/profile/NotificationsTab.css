@@ -1,0 +1,88 @@
+.notifications-tab .section-head {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notifications-tab .section-head i {
+  color: #ff8c00;
+}
+
+.count-badge {
+  background: #dc3545;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+
+.btn-mark-all {
+  background: transparent;
+  border: 1px solid #444;
+  color: #aaa;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-mark-all:hover {
+  background: #333;
+  color: #fff;
+  border-color: #666;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-state i {
+  font-size: 64px;
+  color: #444;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.empty-state p {
+  color: #888;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .notifications-tab .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .btn-mark-all {
+    width: 100%;
+    justify-content: center;
+  }
+}

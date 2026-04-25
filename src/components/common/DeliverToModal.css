@@ -1,0 +1,151 @@
+.deliver-modal {
+  max-width: 500px;
+}
+
+.pincode-checker {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pincode-checker input {
+  flex: 1;
+}
+
+.btn-check-pin {
+  background: #ff8c00;
+  color: #111;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-check-pin:hover {
+  background: #e67300;
+}
+
+.pincode-result {
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pincode-result.available {
+  background: rgba(40, 167, 69, 0.1);
+  border: 1px solid #28a745;
+  color: #28a745;
+}
+
+.pincode-result.unavailable {
+  background: rgba(220, 53, 69, 0.1);
+  border: 1px solid #dc3545;
+  color: #dc3545;
+}
+
+.divider {
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #333;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.saved-addresses-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.saved-addr-item {
+  background: #252525;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.saved-addr-item:hover {
+  border-color: #ff8c00;
+  background: #2a2a2a;
+}
+
+.saved-addr-item.selected {
+  border-color: #ff8c00;
+  background: rgba(255, 140, 0, 0.1);
+}
+
+.saved-addr-name {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.saved-addr-text {
+  color: #aaa;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.btn-add-new-addr {
+  width: 100%;
+  background: #333;
+  border: 1px dashed #666;
+  color: #aaa;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-add-new-addr:hover {
+  border-color: #ff8c00;
+  color: #ff8c00;
+  background: #2a2a2a;
+}
+
+.no-addresses {
+  text-align: center;
+  padding: 30px;
+  color: #666;
+}
+
+.no-addresses i {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 10px;
+}

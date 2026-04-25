@@ -1,0 +1,45 @@
+.star-rating-input {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.star-label {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.star-input {
+  display: none;
+}
+
+.star-icon {
+  color: #ddd;
+  transition: all 0.2s ease;
+}
+
+.star-icon.filled {
+  color: #ffc107;
+}
+
+.star-label:hover .star-icon,
+.star-label:hover ~ .star-label .star-icon {
+  color: #ffc107;
+  transform: scale(1.1);
+}
+
+.star-rating-input.small .star-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.star-rating-input.medium .star-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.star-rating-input.large .star-icon {
+  width: 32px;
+  height: 32px;
+}

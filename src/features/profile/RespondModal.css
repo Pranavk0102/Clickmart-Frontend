@@ -1,0 +1,50 @@
+.respond-modal {
+  max-width: 600px;
+}
+
+.ticket-info-box {
+  background: #252525;
+  border-radius: 6px;
+  padding: 14px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.7;
+}
+
+.ticket-info-header {
+  margin-bottom: 6px;
+}
+
+.ticket-id {
+  color: #ff8c00;
+  font-weight: 600;
+}
+
+.ticket-subject {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.ticket-from {
+  color: #ccc;
+}
+
+.ticket-message {
+  margin-top: 8px;
+  padding: 8px;
+  background: #1a1a1a;
+  border-radius: 4px;
+  color: #bbb;
+}
+
+.previous-response {
+  margin-top: 8px;
+  color: #28a745;
+  font-size: 12px;
+}
+
+.previous-response i {
+  margin-right: 4px;
+}

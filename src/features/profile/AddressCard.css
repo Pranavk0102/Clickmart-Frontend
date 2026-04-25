@@ -1,0 +1,156 @@
+.address-card {
+  background: #252525;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 16px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.address-card:hover {
+  border-color: #666;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.address-card.default-addr {
+  border-color: #ff8c00;
+  background: rgba(255, 140, 0, 0.05);
+}
+
+.addr-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff8c00;
+  color: #111;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.addr-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.addr-type-home {
+  background: rgba(40, 167, 69, 0.15);
+  color: #28a745;
+}
+
+.addr-type-office {
+  background: rgba(0, 123, 255, 0.15);
+  color: #007bff;
+}
+
+.addr-type-other {
+  background: rgba(255, 140, 0, 0.15);
+  color: #ff8c00;
+}
+
+.addr-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.addr-text {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.addr-phone {
+  font-size: 13px;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.addr-phone i {
+  font-size: 11px;
+  color: #666;
+}
+
+.addr-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #333;
+  flex-wrap: wrap;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-edit-addr {
+  background: #333;
+  color: #ff8c00;
+  border: 1px solid #444;
+}
+
+.btn-edit-addr:hover {
+  background: #444;
+  border-color: #ff8c00;
+}
+
+.btn-del-addr {
+  background: transparent;
+  color: #dc3545;
+  border: 1px solid #444;
+}
+
+.btn-del-addr:hover {
+  background: rgba(220, 53, 69, 0.1);
+  border-color: #dc3545;
+}
+
+.btn-set-default {
+  background: transparent;
+  color: #aaa;
+  border: 1px solid #444;
+}
+
+.btn-set-default:hover {
+  background: rgba(255, 140, 0, 0.1);
+  color: #ff8c00;
+  border-color: #ff8c00;
+}
+
+@media (max-width: 768px) {
+  .address-card {
+    padding: 12px;
+  }
+
+  .addr-actions {
+    flex-direction: column;
+  }
+
+  .btn-small {
+    width: 100%;
+    justify-content: center;
+  }
+}

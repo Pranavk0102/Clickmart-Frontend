@@ -1,0 +1,102 @@
+.search-bar-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 8px 15px;
+  border: 2px solid #ff8c00;
+  border-right: none;
+  background: #333;
+  color: white;
+  border-radius: 5px 0 0 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-bar:focus {
+  border-color: #ff8c00;
+}
+
+.search-submit-btn {
+  padding: 8px 15px;
+  background: #ff8c00;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  color: #111;
+  cursor: pointer;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.search-submit-btn:hover {
+  background: #e07800;
+}
+
+/* Hide the old icon-only approach */
+.search-icon {
+  display: none;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-top: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.suggestion-item {
+  padding: 12px 14px;
+  color: #aaa;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #252525;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background: #252525;
+  color: #fff;
+}
+
+.suggestion-item i {
+  color: #666;
+  font-size: 12px;
+}
+
+.suggestion-section {
+  padding: 8px 14px;
+  color: #666;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #151515;
+  border-bottom: 1px solid #252525;
+}
+
+.no-suggestions {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+}

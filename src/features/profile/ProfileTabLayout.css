@@ -1,0 +1,141 @@
+.profile-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+.profile-sidebar {
+  background: #1a1a1a;
+  border-radius: 10px;
+  border: 1px solid #333;
+  overflow: hidden;
+  height: fit-content;
+  position: sticky;
+  top: 80px;
+}
+
+.profile-avatar {
+  background: linear-gradient(135deg, #ff8c00, #e67300);
+  padding: 32px 20px;
+  text-align: center;
+}
+
+.avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.avatar-name {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.avatar-email {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.profile-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-nav .sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 1px solid #2a2a2a;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.profile-nav .sidebar-item:hover {
+  background: #252525;
+  color: #ff8c00;
+}
+
+.profile-nav .sidebar-item.active {
+  background: #252525;
+  color: #ff8c00;
+  border-left: 3px solid #ff8c00;
+}
+
+.profile-nav .sidebar-item i:first-child {
+  width: 18px;
+  text-align: center;
+}
+
+.profile-nav .item-label {
+  flex: 1;
+}
+
+.profile-nav .chevron {
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.profile-nav .sidebar-item:hover .chevron,
+.profile-nav .sidebar-item.active .chevron {
+  opacity: 1;
+}
+
+.profile-main {
+  background: #1a1a1a;
+  border-radius: 10px;
+  border: 1px solid #333;
+  padding: 28px;
+  min-height: 500px;
+}
+
+@media (max-width: 768px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 20px auto;
+  }
+
+  .profile-sidebar {
+    position: static;
+  }
+
+  .profile-avatar {
+    padding: 24px 16px;
+  }
+
+  .avatar-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .avatar-name {
+    font-size: 14px;
+  }
+
+  .profile-nav .sidebar-item {
+    padding: 12px 16px;
+  }
+
+  .profile-main {
+    padding: 20px;
+  }
+}
