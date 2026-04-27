@@ -259,46 +259,41 @@ body {
 }
 
 .admin-pagination {
-    padding: 14px 20px 18px;
-    border-top: 1px solid #333;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
-.admin-pagination-summary {
-    color: #888;
-    font-size: 12px;
-}
-
-.admin-pagination-controls {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-.admin-page-btn {
-    background: #333;
-    border: 1px solid #444;
-    color: #ddd;
-    padding: 6px 12px;
-    border-radius: 5px;
+.pagination-info {
+    padding: 8px 16px;
+    color: #ff8c00;
+    font-size: 14px;
     font-family: 'Poppins', sans-serif;
-    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.pagination-btn {
+    background: transparent;
+    color: #ff8c00;
+    border: 1px solid #ff8c00;
+    padding: 10px 20px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
 }
 
-.admin-page-btn:hover:not(:disabled),
-.admin-page-btn.active {
-    background: #ff8c00;
-    border-color: #ff8c00;
-    color: #111;
+.pagination-btn:hover:not(:disabled) {
+    background: rgba(255, 140, 0, 0.1);
 }
 
-.admin-page-btn:disabled {
-    opacity: 0.45;
+.pagination-btn:disabled {
+    opacity: 0.5;
     cursor: not-allowed;
 }
 
@@ -376,6 +371,11 @@ tbody td {
 .status-processing, .status-in-progress {
     background: rgba(0,123,255,0.2);
     color: #007bff;
+}
+
+.status-confirmed {
+    background: rgba(23,162,184,0.2);
+    color: #17a2b8;
 }
 
 .status-shipped {

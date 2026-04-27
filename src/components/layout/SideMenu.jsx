@@ -1,7 +1,7 @@
 ﻿import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCategories } from '../../features/products/categorySlice';
+import { fetchCategories } from '../../features/products/slices/categorySlice';
 
 const SideMenu = ({ isOpen, onClose }) => {
   const dispatch = useDispatch();

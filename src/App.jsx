@@ -6,39 +6,40 @@ import SideMenu from './components/layout/SideMenu';
 import ErrorBoundary from './components/common/ErrorBoundary';
 import BackToTop from './components/common/BackToTop';
 
-import Home from './features/home/Home';
-import Login from './features/auth/Login';
-import ProtectedRoute from './features/auth/ProtectedRoute';
-import AdminRoute from './features/auth/AdminRoute';
+import Home from './features/home/components/Home';
+import Login from './features/auth/components/Login';
+import ForgotPassword from './features/auth/components/ForgotPassword';
+import ProtectedRoute from './features/auth/components/ProtectedRoute';
+import AdminRoute from './features/auth/components/AdminRoute';
 
-import Products from './features/products/Products';
-import ProductDetail from './features/products/ProductDetail';
+import Products from './features/products/components/Products';
+import ProductDetail from './features/products/components/ProductDetail';
 
-import Cart from './features/cart/Cart';
-import Checkout from './features/checkout/Checkout';
+import Cart from './features/cart/components/Cart';
+import Checkout from './features/checkout/components/Checkout';
 
-import Orders from './features/orders/Orders';
-import OrderDetail from './features/orders/OrderDetail';
-import OrderSuccess from './features/orders/OrderSuccess';
+import Orders from './features/orders/components/Orders';
+import OrderDetail from './features/orders/components/OrderDetail';
+import OrderSuccess from './features/orders/components/OrderSuccess';
 
-import Profile from './features/profile/Profile';
+import Profile from './features/profile/components/Profile';
 
-import AdminLayout from './features/admin/AdminLayout';
-import AdminDashboard from './features/admin/AdminDashboard';
-import AdminOrders from './features/admin/AdminOrders';
-import AdminCustomers from './features/admin/AdminCustomers';
-import AdminInventory from './features/admin/AdminInventory';
-import AdminProducts from './features/admin/AdminProducts';
-import AdminCategories from './features/admin/AdminCategories';
-import AdminCoupons from './features/admin/AdminCoupons';
-import AdminTickets from './features/admin/AdminTickets';
-import AdminOrderDetail from './features/admin/AdminOrderDetail';
+import AdminLayout from './features/admin/components/AdminLayout';
+import AdminDashboard from './features/admin/components/AdminDashboard';
+import AdminOrders from './features/admin/components/AdminOrders';
+import AdminCustomers from './features/admin/components/AdminCustomers';
+import AdminInventory from './features/admin/components/AdminInventory';
+import AdminProducts from './features/admin/components/AdminProducts';
+import AdminCategories from './features/admin/components/AdminCategories';
+import AdminCoupons from './features/admin/components/AdminCoupons';
+import AdminTickets from './features/admin/components/AdminTickets';
+import AdminOrderDetail from './features/admin/components/AdminOrderDetail';
 
-import About from './features/support/About';
-import Contact from './features/support/Contact';
-import FAQ from './features/support/FAQ';
-import Privacy from './features/support/Privacy';
-import Terms from './features/support/Terms';
+import About from './features/support/components/About';
+import Contact from './features/support/components/Contact';
+import FAQ from './features/support/components/FAQ';
+import Privacy from './features/support/components/Privacy';
+import Terms from './features/support/components/Terms';
 
 const MainLayout = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -64,6 +65,7 @@ function App() {
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />

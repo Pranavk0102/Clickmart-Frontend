@@ -1,16 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
-import authReducer from '../features/auth/authSlice';
-import productReducer from '../features/products/productSlice';
-import cartReducer from '../features/cart/cartSlice';
-import orderReducer from '../features/orders/orderSlice';
-import addressReducer from '../features/profile/addressSlice';
-import wishlistReducer from '../features/products/wishlistSlice';
-import categoryReducer from '../features/products/categorySlice';
-import couponReducer from '../features/checkout/couponSlice';
-import adminReducer from '../features/admin/adminSlice';
-import ticketReducer from '../features/profile/ticketSlice';
-import notificationReducer from '../features/profile/notificationSlice';
-import reviewReducer from '../features/products/reviewSlice';
+import authReducer from '../features/auth/slices/authSlice';
+import productReducer from '../features/products/slices/productSlice';
+import cartReducer from '../features/cart/slices/cartSlice';
+import orderReducer from '../features/orders/slices/orderSlice';
+import addressReducer from '../features/profile/slices/addressSlice';
+import wishlistReducer from '../features/products/slices/wishlistSlice';
+import categoryReducer from '../features/products/slices/categorySlice';
+import couponReducer from '../features/checkout/slices/couponSlice';
+import adminReducer from '../features/admin/slices/adminSlice';
+import ticketReducer from '../features/profile/slices/ticketSlice';
+import notificationReducer from '../features/profile/slices/notificationSlice';
+import reviewReducer from '../features/products/slices/reviewSlice';
 
 export const store = configureStore({
   reducer: {
