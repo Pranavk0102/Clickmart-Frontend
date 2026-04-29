@@ -37,7 +37,6 @@ api.interceptors.response.use(
     const originalRequest = error.config;
     const status = error.response?.status;
     const url = originalRequest?.url || '';
-    console.log(originalRequest);
     const isAuthEndpoint =
       url.includes('/auth/login') ||
       url.includes('/auth/register') ||
@@ -69,7 +68,9 @@ api.interceptors.response.use(
       localStorage.removeItem('accessToken');
       localStorage.removeItem('refreshToken');
       localStorage.removeItem('user');
-      window.location.href = '/login';
+      import('../store/store.jsx').then(({ default: store }) => {
+        store.dispatch({ type: 'auth/forceLogout' });
+      });
       return Promise.reject(error);
     }
   }

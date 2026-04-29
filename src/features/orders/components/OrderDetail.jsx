@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link, useLocation } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchOrderByNumber, cancelOrder, returnOrder } from '../slices/orderSlice';
 import ConfirmModal from '../../../components/common/ConfirmModal';
@@ -9,7 +9,6 @@ import { generateInvoicePDF } from '../../../utils/invoiceGenerator';
 const OrderDetail = () => {
   const { orderNumber } = useParams();
   const dispatch = useDispatch();
-  const location = useLocation();
   const { currentOrder: order, loading } = useSelector((state) => state.orders);
   const [cancelConfirm, setCancelConfirm] = useState(false);
   const [returnConfirm, setReturnConfirm] = useState(false);
@@ -127,7 +126,6 @@ const OrderDetail = () => {
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 380px', gap: '20px', alignItems: 'start' }}>
         <div>
-          {/* Order Items */}
           <div className="box">
             <div className="box-title">Order Items</div>
             {order.items?.map((item) => (
@@ -145,7 +143,6 @@ const OrderDetail = () => {
             ))}
           </div>
 
-          {/* Shipping Address */}
           <div className="box">
             <div className="box-title">Shipping Address</div>
             <div style={{ fontSize: '14px', lineHeight: '1.8', color: '#aaa' }}>

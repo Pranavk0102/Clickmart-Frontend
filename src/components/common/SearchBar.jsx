@@ -38,7 +38,7 @@ const SearchBar = ({ placeholder = 'Search products...', onSearch }) => {
     let recent = [...recentSearches];
     recent = recent.filter(s => s !== trimmed);
     recent.unshift(trimmed);
-    recent = recent.slice(0, 5); // Keep only last 5
+    recent = recent.slice(0, 5); 
 
     setRecentSearches(recent);
     localStorage.setItem('cm_recent_searches', JSON.stringify(recent));

@@ -39,10 +39,13 @@ const Login = () => {
 
   const validateRegister = () => {
     const errs = {};
+    const namePattern = /^[a-zA-Z][a-zA-Z\s'\-]*$/;
     if (!registerData.firstName.trim()) errs.firstName = 'First name is required';
     else if (registerData.firstName.trim().length < 2) errs.firstName = 'Min 2 characters';
-    if (!registerData.lastName.trim()) errs.lastName = 'Last name is required';
-    else if (registerData.lastName.trim().length < 2) errs.lastName = 'Min 2 characters';
+    else if (!namePattern.test(registerData.firstName.trim())) errs.firstName = 'Only letters, apostrophes, and hyphens allowed';
+    if (registerData.lastName.trim()) {
+      if (!namePattern.test(registerData.lastName.trim())) errs.lastName = 'Only letters, apostrophes, and hyphens allowed';
+    }
     if (!registerData.email.trim()) errs.email = 'Email is required';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(registerData.email)) errs.email = 'Enter a valid email address';
     if (!registerData.phone.trim()) errs.phone = 'Phone is required';
@@ -146,9 +149,9 @@ const Login = () => {
                     {regErrors.firstName && <span style={errStyle}>{regErrors.firstName}</span>}
                   </div>
                   <div className="form-group">
-                    <label>Last Name <span style={{ color: 'red', marginLeft: '2px' }}>*</span></label>
+                    <label>Last Name <span style={{ color: '#888', marginLeft: '4px', fontSize: '11px', fontWeight: 400 }}>(optional)</span></label>
                     <input type="text" className={`form-input${regErrors.lastName ? ' error' : ''}`}
-                      placeholder="Last name" value={registerData.lastName}
+                      placeholder="Last name or initial (e.g. R)" value={registerData.lastName}
                       onChange={(e) => setRegField('lastName', e.target.value)} />
                     {regErrors.lastName && <span style={errStyle}>{regErrors.lastName}</span>}
                   </div>

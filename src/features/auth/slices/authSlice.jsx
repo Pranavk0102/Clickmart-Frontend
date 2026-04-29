@@ -177,6 +177,14 @@ const authSlice = createSlice({
       state.isAdmin = action.payload?.role?.toUpperCase() === 'ADMIN';
       localStorage.setItem('user', JSON.stringify(action.payload));
     },
+    forceLogout: (state) => {
+      state.user = null;
+      state.accessToken = null;
+      state.refreshToken = null;
+      state.isAuthenticated = false;
+      state.isAdmin = false;
+      state.loading = false;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -238,7 +246,7 @@ const authSlice = createSlice({
   },
 });
 
-export const { clearError, clearPasswordChangeSuccess, setUser } = authSlice.actions;
+export const { clearError, clearPasswordChangeSuccess, setUser, forceLogout } = authSlice.actions;
 
 export const selectIsAdmin = (state) => state.auth.isAdmin;
 export const selectCurrentUser = (state) => state.auth.user;
